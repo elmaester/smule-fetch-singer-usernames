@@ -1,7 +1,9 @@
+#!/opt/nvm/versions/node/v17.5.0/bin/node
+
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const url = "https://smule.com";
-const query = "O-Zone - Despre Tine";
+const query = process.argv.slice(2).join(" ");
 const selectors = require("./src/selectors");
 const autoScroll = require("./src/functions/autoScroll");
 const getUniqueNames = require("./src/functions/getUniqueNames");
@@ -10,7 +12,7 @@ const writeNamesToFile = require("./src/functions/writeNamesToFile");
 
 const main = async () => {
   try {
-    const cookies = JSON.parse(fs.readFileSync("creds/cookies.json"));
+    const cookies = JSON.parse(fs.readFileSync("/home/morket/code/scraping/smule/creds/cookies.json"));
     const browser = await puppeteer.launch({ headless: false });
     const [page] = await browser.pages();
     await page.setViewport({
