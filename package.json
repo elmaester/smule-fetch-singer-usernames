@@ -1,0 +1,23 @@
+{
+  "name": "smule-fetch-singer-usernames",
+  "version": "1.0.0",
+  "description": "Find people who've sung a particular song before and save their usernames",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmaester/smule-fetch-singer-usernames.git"
+  },
+  "keywords": [
+    "scraping",
+    "puppeteer"
+  ],
+  "author": "elmaester",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elmaester/smule-fetch-singer-usernames/issues"
+  },
+  "homepage": "https://github.com/elmaester/smule-fetch-singer-usernames#readme"
+}
