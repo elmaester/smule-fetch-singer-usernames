@@ -21,7 +21,7 @@ const main = async () => {
     });
     await page.setCookie(...cookies);
     await page.goto(url);
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1000);
     await acceptCookies(page);
     await page.waitForSelector(selectors.inviters);
     await autoScroll(page);
