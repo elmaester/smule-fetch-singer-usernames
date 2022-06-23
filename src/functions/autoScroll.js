@@ -12,7 +12,7 @@ async function autoScroll(page, step) {
             clearInterval(timer);
             resolve();
           }
-        }, 100);
+        }, 200);
       });
     }, step);
   } catch (e) {
