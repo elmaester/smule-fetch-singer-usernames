@@ -2,8 +2,8 @@
 
 const puppeteer = require("puppeteer");
 const fs = require("fs");
-const url = "https://smule.com";
-const query = process.argv.slice(2).join(" ");
+const query = process.argv.slice(2).join("+");
+const url = `https://www.smule.com/search?q=${query}&type=recording&sort=recent`;
 const selectors = require("./src/selectors");
 const autoScroll = require("./src/functions/autoScroll");
 const getUniqueNames = require("./src/functions/getUniqueNames");
@@ -23,15 +23,8 @@ const main = async () => {
     await page.goto(url);
     await page.waitForTimeout(2000);
     await acceptCookies(page);
-    await page.waitForSelector(selectors.searchButton);
-    await page.click(selectors.searchButton);
-    await page.keyboard.type(query);
-    await page.keyboard.press("Enter");
-    await page.waitForSelector(selectors.username1);
-    await page.waitForSelector(selectors.seeAllRecordingsButton);
-    await page.click(selectors.seeAllRecordingsButton);
-    await page.waitForSelector(selectors.username1);
-    await autoScroll(page, 100);
+    await page.waitForSelector(selectors.inviters);
+    await autoScroll(page);
     const uniqueNames = await getUniqueNames(page);
     writeNamesToFile(query, uniqueNames);
     await browser.close();
