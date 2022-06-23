@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/elmaester/smule-fetch-singer-usernames/issues"
   },
-  "homepage": "https://github.com/elmaester/smule-fetch-singer-usernames#readme"
+  "homepage": "https://github.com/elmaester/smule-fetch-singer-usernames#readme",
+  "dependencies": {
+    "puppeteer": "^14.4.1"
+  }
 }
