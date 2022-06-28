@@ -1,4 +1,4 @@
-#!/opt/nvm/versions/node/v17.5.0/bin/node
+#!/user/bin/env node
 
 require('dotenv').config();
 
