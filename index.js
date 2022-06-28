@@ -1,5 +1,7 @@
 #!/opt/nvm/versions/node/v17.5.0/bin/node
 
+require('dotenv').config();
+
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const query = process.argv.slice(2).join("+");
@@ -12,7 +14,7 @@ const writeNamesToFile = require("./src/functions/writeNamesToFile");
 
 const main = async () => {
   try {
-    const cookies = JSON.parse(fs.readFileSync("/home/morket/code/scraping/smule/creds/cookies.json"));
+    const cookies = JSON.parse(fs.readFileSync(process.env.COOKIES_PATH));
     const browser = await puppeteer.launch({ headless: false });
     const [page] = await browser.pages();
     await page.setViewport({

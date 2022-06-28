@@ -1,9 +1,10 @@
+require('dotenv').config();
 const fs = require("fs");
 
 function writeNamesToFile(query, names) {
   for (let name of names) {
     fs.writeFileSync(
-      `/home/morket/code/scraping/smule/names/${query.replaceAll("+", " ")}.txt`,
+      `${process.env.WRITE_PATH}/${query.replaceAll("+", " ")}.txt`,
       name + "\n",
       { flag: "a+" }
     );
