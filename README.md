@@ -6,6 +6,8 @@ Using Puppeteer, simulates user actions to log in to Smule.com (social network f
 
 ## What you need to run it
 
+Run `npm install` from the project root.
+
 Export your Smule cookies into a `cookies.json` file using this chrome extension:
 [Export cookie JSON file for Puppeteer](https://chrome.google.com/webstore/detail/%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BCjson%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%87%BA%E5%8A%9B-for-puppet/nmckokihipjgplolmcmjakknndddifde)
 
