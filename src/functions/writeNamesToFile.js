@@ -1,10 +1,10 @@
-require('dotenv').config();
+const { writePath } = require("../../config");
 const fs = require("fs");
 
 function writeNamesToFile(query, names) {
   for (let name of names) {
     fs.writeFileSync(
-      `${process.env.WRITE_PATH}/${query.replaceAll("+", " ")}.txt`,
+      `${writePath}/${query.replaceAll("+", " ")}.txt`,
       name + "\n",
       { flag: "a+" }
     );

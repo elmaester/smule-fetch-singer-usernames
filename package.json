@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/elmaester/smule-fetch-singer-usernames#readme",
   "dependencies": {
-    "dotenv": "^16.0.1",
     "puppeteer": "^14.4.1"
   }
 }

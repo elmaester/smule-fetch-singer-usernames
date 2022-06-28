@@ -1,6 +1,6 @@
-#!/user/bin/env node
+#!/usr/bin/env node
 
-require('dotenv').config();
+const { cookiesPath } = require("./config");
 
 const puppeteer = require("puppeteer");
 const fs = require("fs");
@@ -14,7 +14,7 @@ const writeNamesToFile = require("./src/functions/writeNamesToFile");
 
 const main = async () => {
   try {
-    const cookies = JSON.parse(fs.readFileSync(process.env.COOKIES_PATH));
+    const cookies = JSON.parse(fs.readFileSync(cookiesPath));
     const browser = await puppeteer.launch({ headless: false });
     const [page] = await browser.pages();
     await page.setViewport({
