@@ -10,13 +10,12 @@ const SongSchema = {
 };
 
 async function writeNamesToRealm(query, names) {
-  let song;
   const realm = await Realm.open({
     path: writePath + "/RealmDB/Songs.realm",
     schema: [SongSchema],
   });
   await realm.write(() => {
-    song = realm.create("Song", {
+    realm.create("Song", {
       name: query,
       singers: names,
     });
