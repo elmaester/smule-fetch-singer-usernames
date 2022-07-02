@@ -11,14 +11,7 @@ Run `npm install` from the project root.
 Export your Smule cookies into a `cookies.json` file using this chrome extension:
 [Export cookie JSON file for Puppeteer](https://chrome.google.com/webstore/detail/%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BCjson%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%87%BA%E5%8A%9B-for-puppet/nmckokihipjgplolmcmjakknndddifde)
 
-Create a `config.js` file in the root of the project with the following contents:
-
-```
-module.exports = {
-  cookiesPath: "your_path/cookies.json",
-  writePath: "your_path",
-};
-```
+Create a `config.js` file in the root of the project and configure as in the example provied.
 
 Then run as follows:
 
